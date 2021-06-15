@@ -1,8 +1,6 @@
 package guru.qa.service;
 
-import guru.qa.service.impl.MinusOperationHandler;
-import guru.qa.service.impl.MultOperationHandler;
-import guru.qa.service.impl.SumOperationHandler;
+import guru.qa.service.impl.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -28,4 +26,17 @@ class OperationHandlerTest {
         handler = new MinusOperationHandler();
         Assertions.assertEquals(4, handler.invoke(10, 6));
     }
+
+    @Test
+    void DivideTest() {
+        handler = new DivideOperationHandler();
+        Assertions.assertEquals(4, handler.invoke(12, 3));
+    }
+
+    @Test
+    void PowTest() {
+        handler = new PowOperationHandler();
+        Assertions.assertEquals(81, handler.invoke(3, 4));
+    }
+
 }
