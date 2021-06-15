@@ -1,5 +1,9 @@
 target/
 build/
+settings.gradle
+gradlew.bat
+gradlew
+gradle/wrapper
 
 ### IntelliJ IDEA ###
 .idea
